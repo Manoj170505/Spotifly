@@ -53,7 +53,7 @@ export const Player = () => {
         <div className='w-full h-20 bg-[#181818] absolute bottom-0 left-0 flex items-center justify-between px-4'>
             <div className='flex items-center gap-4'>
                 <img 
-                    className='rounded-md w-15 h-15' 
+                    className='rounded-md w-16 h-16' 
                     src={track.image} 
                     alt="Album Cover" 
                 />
@@ -82,10 +82,10 @@ export const Player = () => {
                     <button className='hover:text-[#16a349]' onClick={toggleMute}>{isMuted ? <FaVolumeXmark /> : <FaVolumeHigh />}</button>
                 </div>
                 <div className='flex flex-row justify-center items-center gap-4 text-white'>
-                    <div><p className='text-sm hidden md:block'>{time.currentTime.minutes}:{time.currentTime.seconds < 10 ? `0${time.currentTime.seconds}` : time.currentTime.seconds}</p></div>
+                    <div><p className='text-white text-sm hidden md:block'>{time.currentTime.minutes}:{time.currentTime.seconds < 10 ? `0${time.currentTime.seconds}` : time.currentTime.seconds}</p></div>
                 <div 
                     ref={seekBG} 
-                    className='w-96 h-1 bg-[#404040] rounded-full mt-2 cursor-pointer screen sm:w-20 md:w-96'
+                    className='w-64 h-1 bg-[#404040] rounded-full mt-2 cursor-pointer sm:w-20 md:w-96'
                     onClick={handleSeek}
                 >
                     <div 
@@ -106,7 +106,7 @@ export const Player = () => {
                     <button className='hover:text-[#16a349]' ><MdOutlineQueueMusic /></button>
                     <button className='hover:text-[#16a349]' ><LuMonitorSpeaker /></button>
                     <button className='hover:text-[#16a349]' ><HiMiniSpeakerWave /></button>
-                    <div className='w-15 h-1 bg-[#404040] rounded-full mt-2 flex items-center cursor-pointer'>
+                    <div className='w-16 h-1 bg-[#404040] rounded-full mt-2 flex items-center cursor-pointer'>
                         <div 
                             className='h-1 bg-[#ffffff] rounded-full'
                             style={{ width: `${volumePercent}%` }}
